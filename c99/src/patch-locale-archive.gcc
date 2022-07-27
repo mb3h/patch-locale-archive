@@ -1,0 +1,13 @@
+#!/bin/sh
+GROUP1='
+patch-locale-archive.c
+wcwidth.c
+ctype.c
+archive.c
+'
+GROUP2='
+log-helper.c
+unicode-helper.c
+md5.c
+'
+gcc -std=c99 -o patch-locale-archive $GROUP1 $GROUP2
