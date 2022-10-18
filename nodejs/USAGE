@@ -1,0 +1,22 @@
+$ node patch-locale-archive -h <locale> <UTF-8>[<UTF-8> ...] -i ./locale-archive.orig -o ./locale-archive
+$ node patch-locale-archive -h -w <locale> <UTF-16>[<UTF-16> ...] -i ./locale-archive.orig -o ./locale-archive
+$ cat EAW-test.txt | grep -v ^# | node patch-locale-archive -h -w - <locale> -i ./locale-archive.orig -o ./locale-archive
+$ cat EAW-test.txt | grep -v ^# | awk '{ print $1 }' | node patch-locale-archive -h -w - <locale> -i ./locale-archive.orig -o ./locale-archive
+   Read 'locale-archive' specifiled by '-i',
+   change values specified character to 2(wide)
+   and write 'locale-archive' specifiled by '-o'.
+
+   <locale> 'en_US.utf8' etc. (any of descriptions listed by '-s' option)
+   <UTF-8>  'e29885' etc.
+   <UTF-16> '2605' etc.
+
+   If '-h' option is not specified, utility parse input not as hex-decimal strings but as direct character.
+   
+
+$ node patch-locale-archive -s -r -m -i ./locale-archive
+   List tables of 'STRING' 'LOCREC' 'SUMHASH' on 'locale-archive' specified by '-i'.
+
+
+$ node patch-locale-archive --help
+$ node patch-locale-archive
+   Display simple command-help.

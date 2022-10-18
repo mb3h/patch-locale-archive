@@ -1,10 +1,15 @@
 # patch-locale-archive
 
-## Overview
-
 ![](https://raw.githubusercontent.com/mb3h/patch-locale-archive/master/inspect.png)
 ![](https://raw.githubusercontent.com/mb3h/patch-locale-archive/master/patching.png)
 ![](https://raw.githubusercontent.com/mb3h/patch-locale-archive/master/wcwidth-test.png)
+
+## Design Policy
+
+maintenance model (code paradigm): objective [C99,Node.js]
+
+
+## Overview
 
 This utility can be available to correct unsuitable wide-character
 behavior on application which depends on 'wcwidth()' function.
@@ -29,7 +34,8 @@ this utility can correct without the definition file.
 ## TODO priority / progress
 
 TODO
-- [ ] append node.js version.
+- [x] append node.js version.
+- [ ] complete package.json (node.js version)
 - [ ] append level3 table dump option about specified characters.
 
 PENDING
@@ -45,4 +51,4 @@ See <language>/USAGE file.
 
 ## Notes
 
-README Updated on:2022-07-27
+README Updated on:2022-10-18
